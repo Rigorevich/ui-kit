@@ -1,0 +1,28 @@
+.Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 32px;
+    min-height: 32px;
+    background-color: aliceblue;
+
+    &__primary {
+        background-color: aqua;
+    }
+
+    &__secondary {
+        background-color: antiquewhite;
+    }
+
+    &__error {
+        background-color: tomato;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+}
+

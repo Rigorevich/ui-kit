@@ -1,0 +1,54 @@
+.Label {
+  font-size: 14px;
+  padding-bottom: 6px;
+  color: #080808;
+
+  &__disabled {
+    color: #e4e3ea;
+  }
+}
+
+.Text {
+  margin: 0;
+  color: #080808;
+
+  &__error {
+    color: #a9150b;
+  }
+
+  &__disabled {
+    color: #e4e3ea;
+  }
+}
+
+.Input {
+  padding: 0 15px;
+  height: 40px;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 2px solid #353637;
+
+  &__error {
+    border-color: #a9150b;
+  }
+
+  &__success {
+    border-color: #abe734;
+  }
+
+  &__disabled {
+    border-color: #e4e3ea;
+  }
+
+  &:focus {
+    border-color: #1b116e;
+  }
+}
+
+.Message {
+  font-size: 14px;
+  color: #a9150b;
+  padding-top: 4px;
+}
+

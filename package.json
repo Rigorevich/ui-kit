@@ -1,0 +1,66 @@
+{
+  "name": "ui-kit-rigorevich",
+  "version": "3.0.0",
+  "description": "The library of reusable components",
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest",
+    "sb": "storybook dev -p 6006",
+    "sb:build": "storybook build"
+  },
+  "keywords": [
+    "rollup",
+    "lib",
+    "react",
+    "ts",
+    "storybook"
+  ],
+  "author": "Rigorevich Ilya <Rigorevich>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@storybook/addon-essentials": "^7.5.3",
+    "@storybook/addon-interactions": "^7.5.3",
+    "@storybook/addon-links": "^7.5.3",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.5.3",
+    "@storybook/react": "^7.5.3",
+    "@storybook/react-vite": "^7.5.3",
+    "@storybook/testing-library": "^0.2.2",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/user-event": "^14.5.1",
+    "@types/jest": "^29.5.9",
+    "@types/react": "^18.2.37",
+    "autoprefixer": "^10.4.16",
+    "jest": "^29.7.0",
+    "jest-css-modules": "^2.1.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^3.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^4.5.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "storybook": "^7.5.3",
+    "typescript": "^5.2.2",
+    "typescript-plugin-css-modules": "^5.0.2"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "dependencies": {
+    "classnames": "^2.3.2"
+  }
+}
