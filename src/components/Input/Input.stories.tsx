@@ -1,15 +1,14 @@
-import React from "react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react';
 
-import { Input } from "./Input";
+import { Input } from './Input';
 
 const meta: Meta<typeof Input> = {
   component: Input,
-  title: "Marbella/InputField",
+  title: 'Marbella/InputField',
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {},
 };
 export default meta;
@@ -22,7 +21,7 @@ export const Primary: Story = {
 Primary.args = {
   error: false,
   disabled: false,
-  label: "Primary",
+  label: 'Primary',
 };
 
 export const Success: Story = {
@@ -32,7 +31,7 @@ Success.args = {
   error: false,
   success: true,
   disabled: false,
-  label: "Success",
+  label: 'Success',
 };
 
 export const Error: Story = {
@@ -41,7 +40,7 @@ export const Error: Story = {
 Error.args = {
   error: true,
   disabled: false,
-  label: "Error",
+  label: 'Error',
 };
 
 export const Disabled: Story = {
@@ -49,5 +48,5 @@ export const Disabled: Story = {
 };
 Disabled.args = {
   disabled: true,
-  label: "Disabled",
+  label: 'Disabled',
 };

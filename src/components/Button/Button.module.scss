@@ -6,6 +6,7 @@
   --color-error: #f44336;
   --color-warning: #ff9800;
   --color-info: #2196f3;
+  --color-disabled: #9e9e9e;
 
   --size-padding-large: 12px 36px;
   --size-padding-medium: 8px 25px;
@@ -28,15 +29,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 4px;
   outline: none;
   border-style: solid;
   cursor: pointer;
   background-color: inherit;
+  transition: all 0.2s ease-out;
 
   &__addon {
     display: flex;
     align-items: center;
-    justify-content: center;
   }
 
   &__color {
@@ -117,8 +119,17 @@
     }
   }
 
+  &:hover:enabled {
+    opacity: 0.8;
+  }
+
+  &:active:enabled {
+    transform: scale(0.95);
+  }
+
   &:disabled {
     cursor: not-allowed;
     pointer-events: auto;
+    opacity: 0.4;
   }
 }

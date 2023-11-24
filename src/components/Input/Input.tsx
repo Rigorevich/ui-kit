@@ -1,9 +1,9 @@
-import React, { Fragment } from "react";
-import classNames from "classnames";
+import { Fragment } from 'react';
+import classNames from 'classnames';
 
-import { InputProps } from "./Input.types";
+import { InputProps } from './Input.types';
 
-import styles from "./Input.module.scss";
+import styles from './Input.module.scss';
 
 export const Input = ({
   id,
