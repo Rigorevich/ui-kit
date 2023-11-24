@@ -1,28 +1,124 @@
+:root {
+  --color-default: #fff;
+  --color-primary: #2196f3;
+  --color-secondary: #f44336;
+  --color-success: #4caf50;
+  --color-error: #f44336;
+  --color-warning: #ff9800;
+  --color-info: #2196f3;
+
+  --size-padding-large: 12px 36px;
+  --size-padding-medium: 8px 25px;
+  --size-padding-small: 6px 15px;
+
+  --size-border-radius-large: 8px;
+  --size-border-radius-medium: 4px;
+  --size-border-radius-small: 2px;
+
+  --size-border-width-large: 3px;
+  --size-border-width-medium: 2px;
+  --size-border-width-small: 1px;
+
+  --size-font-size-large: 18px;
+  --size-font-size-medium: 16px;
+  --size-font-size-small: 14px;
+}
+
 .Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border-style: solid;
+  cursor: pointer;
+  background-color: inherit;
+
+  &__addon {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4px;
-    cursor: pointer;
-    min-width: 32px;
-    min-height: 32px;
-    background-color: aliceblue;
+  }
 
-    &__primary {
-        background-color: aqua;
+  &__color {
+    &_primary {
+      background-color: var(--color-primary);
+      color: var(--color-primary);
+      border-color: var(--color-primary);
     }
 
-    &__secondary {
-        background-color: antiquewhite;
+    &_secondary {
+      background-color: var(--color-secondary);
+      color: var(--color-secondary);
+      border-color: var(--color-secondary);
     }
 
-    &__error {
-        background-color: tomato;
+    &_success {
+      background-color: var(--color-success);
+      color: var(--color-success);
+      border-color: var(--color-success);
     }
 
-    &:disabled {
-        cursor: not-allowed;
-        opacity: 0.5;
+    &_error {
+      background-color: var(--color-error);
+      color: var(--color-error);
+      border-color: var(--color-error);
     }
+
+    &_warning {
+      background-color: var(--color-warning);
+      color: var(--color-warning);
+      border-color: var(--color-warning);
+    }
+
+    &_info {
+      background-color: var(--color-info);
+      color: var(--color-info);
+      border-color: var(--color-info);
+    }
+  }
+
+  &__variant {
+    &_outlined {
+      background-color: transparent;
+    }
+
+    &_filled {
+      color: var(--color-default);
+      border: none;
+    }
+
+    &_transparent {
+      border: none;
+      background-color: transparent;
+    }
+  }
+
+  &__size {
+    &_large {
+      font-weight: bold;
+      font-size: var(--size-font-size-large);
+      padding: var(--size-padding-large);
+      border-width: var(--size-border-width-large);
+      border-radius: var(--size-border-radius-large);
+    }
+
+    &_medium {
+      font-size: var(--size-font-size-medium);
+      padding: var(--size-padding-medium);
+      border-width: var(--size-border-width-medium);
+      border-radius: var(--size-border-radius-medium);
+    }
+
+    &_small {
+      font-size: var(--size-font-size-small);
+      padding: var(--size-padding-small);
+      border-width: var(--size-border-width-small);
+      border-radius: var(--size-border-radius-small);
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    pointer-events: auto;
+  }
 }
-
