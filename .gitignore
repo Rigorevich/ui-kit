@@ -2,7 +2,6 @@
 /dist
 
 /.idea
-/.storybook
 
 /package-lock.json
 /yarn.lock
