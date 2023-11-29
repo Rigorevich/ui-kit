@@ -9,44 +9,45 @@ const meta: Meta<typeof Input> = {
     layout: 'centered',
   },
   tags: ['autodocs'],
-  argTypes: {},
+  argTypes: {
+    size: {
+      defaultValue: 'medium',
+    },
+  },
 };
 export default meta;
 
 type Story = StoryObj<typeof Input>;
 
-export const Primary: Story = {
+export const Default: Story = {
   render: (args) => <Input data-testId="InputField-id" {...args} />,
 };
-Primary.args = {
-  error: false,
-  disabled: false,
-  label: 'Primary',
+Default.args = {
+  placeholder: 'Search Email...',
 };
 
 export const Success: Story = {
   render: (args) => <Input data-testId="InputField-id" {...args} />,
 };
 Success.args = {
-  error: false,
-  success: true,
+  placeholder: 'Search Email...',
+  variant: 'success',
   disabled: false,
-  label: 'Success',
 };
 
 export const Error: Story = {
   render: (args) => <Input data-testId="InputField-id" {...args} />,
 };
 Error.args = {
-  error: true,
+  placeholder: 'Search Email...',
+  variant: 'error',
   disabled: false,
-  label: 'Error',
 };
 
 export const Disabled: Story = {
   render: (args) => <Input data-testId="InputField-id" {...args} />,
 };
 Disabled.args = {
+  placeholder: 'Search Email...',
   disabled: true,
-  label: 'Disabled',
 };

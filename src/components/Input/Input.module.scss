@@ -1,53 +1,62 @@
-.Label {
-  font-size: 14px;
-  padding-bottom: 6px;
-  color: #080808;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap');
 
-  &__disabled {
-    color: #e4e3ea;
-  }
-}
-
-.Text {
-  margin: 0;
-  color: #080808;
-
-  &__error {
-    color: #a9150b;
-  }
-
-  &__disabled {
-    color: #e4e3ea;
-  }
+:root {
+  /* Variables */
 }
 
 .Input {
-  padding: 0 15px;
-  height: 40px;
-  width: 300px;
-  background-color: #fff;
-  border-radius: 3px;
-  border: 2px solid #353637;
+  font-family: 'Inter', sans-serif;
+  padding: 0 32px 0 8px;
+  height: 34px;
+  border-radius: 4px;
+  border: 1px solid #c5d0de;
+  background: url('https://f360.elinext.com/assets/search24.e3e4b1b5.svg') no-repeat center right 5px;
 
-  &__error {
-    border-color: #a9150b;
+  &::placeholder {
+    font-size: 14px;
+    font-weight: 300;
+    color: #a4a8ac;
   }
 
-  &__success {
-    border-color: #abe734;
+  &__size {
+    &_large {
+    }
+
+    &_medium {
+
+    }
+
+    &_small {
+
+    }
   }
 
-  &__disabled {
+ &__variant {
+   &_error {
+     border-color: #e81000;
+
+     &::placeholder {
+       color: #e81000;
+     }
+   }
+
+   &_success {
+     border-color: #88a243;
+
+     &::placeholder {
+       color: #88a243;
+     }
+   }
+ }
+
+  &:disabled {
     border-color: #e4e3ea;
   }
 
   &:focus {
-    border-color: #1b116e;
+    outline: 0;
+    border: 1px solid #2974ff;
+    box-shadow: 0 0 1px 2px #2974ff26;
   }
 }
 
-.Message {
-  font-size: 14px;
-  color: #a9150b;
-  padding-top: 4px;
-}

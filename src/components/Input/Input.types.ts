@@ -1,12 +1,9 @@
-import { ChangeEventHandler } from 'react';
+import { InputHTMLAttributes } from 'react';
 
-export interface InputProps {
-  id?: string;
-  label?: string;
-  error?: boolean;
-  message?: string;
-  success?: boolean;
-  disabled?: boolean;
-  placeholder?: string;
-  onChange?: ChangeEventHandler<HTMLInputElement>;
+export type InputVariant = 'error' | 'success';
+export type InputSize = 'large' | 'medium' | 'small';
+
+export interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
+  variant?: InputVariant;
+  size?: InputSize;
 }
