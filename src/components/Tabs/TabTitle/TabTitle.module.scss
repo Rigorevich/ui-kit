@@ -1,0 +1,25 @@
+.Tab__title {
+  position: relative;
+  margin-right: 40px;
+  padding-bottom: 20px;
+  color: #2c333f;
+  /* text-align: center;
+  width: 100px; */
+
+  &_active {
+    font-weight: 700;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      bottom: -1px;
+      left: 0;
+      border-bottom: 2px solid #ef0d33;
+    }
+  }
+}
+.Tab__button {
+  all: unset;
+  cursor: pointer;
+}
