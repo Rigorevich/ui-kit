@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 
-import { ButtonProps } from './Button.types';
+import type { ButtonProps } from './Button.types';
 
 import styles from './Button.module.scss';
 

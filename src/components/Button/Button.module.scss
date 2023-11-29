@@ -1,35 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap');
+
 :root {
   --color-default: #fff;
   --color-primary: #2196f3;
   --color-secondary: #f44336;
   --color-success: #4caf50;
-  --color-error: #f44336;
+  --color-error: #EF0D33;
   --color-warning: #ff9800;
-  --color-info: #2196f3;
+  --color-info: #798594;
   --color-disabled: #9e9e9e;
 
   --size-padding-large: 12px 36px;
   --size-padding-medium: 8px 25px;
-  --size-padding-small: 6px 15px;
+  --size-padding-small: 4px 12px;
 
   --size-border-radius-large: 8px;
-  --size-border-radius-medium: 4px;
-  --size-border-radius-small: 2px;
+  --size-border-radius-medium: 6px;
+  --size-border-radius-small: 4px;
 
   --size-border-width-large: 3px;
   --size-border-width-medium: 2px;
   --size-border-width-small: 1px;
 
-  --size-font-size-large: 18px;
-  --size-font-size-medium: 16px;
+  --size-font-size-large: 16px;
+  --size-font-size-medium: 14px;
   --size-font-size-small: 14px;
+
+  --weight-regular: 400;
+  --weight-medium: 600;
+  --weight-semibold: 700;
 }
 
 .Button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
   outline: none;
   border-style: solid;
   cursor: pointer;
@@ -97,7 +104,7 @@
 
   &__size {
     &_large {
-      font-weight: bold;
+      font-weight: var(--weight-semibold);
       font-size: var(--size-font-size-large);
       padding: var(--size-padding-large);
       border-width: var(--size-border-width-large);
@@ -106,12 +113,14 @@
 
     &_medium {
       font-size: var(--size-font-size-medium);
+      font-weight: var(--weight-medium);
       padding: var(--size-padding-medium);
       border-width: var(--size-border-width-medium);
       border-radius: var(--size-border-radius-medium);
     }
 
     &_small {
+      font-weight: var(--weight-regular);
       font-size: var(--size-font-size-small);
       padding: var(--size-padding-small);
       border-width: var(--size-border-width-small);
@@ -124,7 +133,8 @@
   }
 
   &:active:enabled {
-    transform: scale(0.95);
+    border-color: #2974ff;
+    box-shadow: 0 0 1px 2px #2974ff26;
   }
 
   &:disabled {
