@@ -1,6 +1,6 @@
 {
-  "name": "@uikit/360feedback",
-  "version": "1.0.0",
+  "name": "@rigorevich/uikit-360feedback",
+  "version": "0.0.2",
   "license": "MIT",
   "author": "Rigorevich Ilya <Rigorevich>",
   "description": "The library of reusable components",
@@ -29,7 +29,6 @@
     "@babel/preset-react": "^7.23.3",
     "@babel/preset-typescript": "^7.23.3",
     "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.5",
     "@storybook/addon-essentials": "^7.5.3",
