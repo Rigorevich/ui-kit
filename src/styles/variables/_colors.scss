@@ -1,0 +1,34 @@
+/*  Primary colors  */
+:root {
+  --primary-color: #EF0D33;
+  --error-color: #F2431C;
+  --pending-color: #FF8A00;
+  --success-color: #04AF00;
+  --white-color: #ffffff;
+  --dark-color: #2C333F;
+}
+
+/*  Hover colors  */
+:root {
+  --primary-hover-color: #C70728;
+  --dark-hover-color: #22262E;
+}
+
+/*  Focus colors  */
+:root {
+  --focus-color: #2974FF;
+}
+
+/*  Contrast colors  */
+:root {
+  --dark-contrast-50-color: #2C333F;
+  --dark-contrast-100-color: #525962;
+  --dark-contrast-200-color: #798594;
+  --dark-contrast-300-color: #C5D0DE;
+  --dark-contrast-400-color: #CED7E3;
+  --dark-contrast-500-color: #D6DEE8;
+  --dark-contrast-600-color: #DFE5ED;
+  --dark-contrast-700-color: #E8ECF2;
+  --dark-contrast-800-color: #F0F3F7;
+  --dark-contrast-900-color: #F9FAFC;
+}
