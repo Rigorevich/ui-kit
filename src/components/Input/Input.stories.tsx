@@ -23,31 +23,8 @@ export const Default: Story = {
   render: (args) => <Input data-testId="InputField-id" {...args} />,
 };
 Default.args = {
-  placeholder: 'Search Email...',
-};
-
-export const Success: Story = {
-  render: (args) => <Input data-testId="InputField-id" {...args} />,
-};
-Success.args = {
-  placeholder: 'Search Email...',
-  variant: 'success',
-  disabled: false,
-};
-
-export const Error: Story = {
-  render: (args) => <Input data-testId="InputField-id" {...args} />,
-};
-Error.args = {
-  placeholder: 'Search Email...',
+  placeholder: 'Placeholder',
   variant: 'error',
-  disabled: false,
-};
-
-export const Disabled: Story = {
-  render: (args) => <Input data-testId="InputField-id" {...args} />,
-};
-Disabled.args = {
-  placeholder: 'Search Email...',
-  disabled: true,
+  description: 'Description',
+  label: 'Label',
 };

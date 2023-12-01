@@ -1,9 +1,11 @@
-import { InputHTMLAttributes } from 'react';
+import { DetailedHTMLProps, InputHTMLAttributes } from 'react';
 
 export type InputVariant = 'error' | 'success';
-export type InputSize = 'large' | 'medium' | 'small';
+export type InputType = 'search' | 'date';
 
-export interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
+export interface InputProps extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
+  inputType?: InputType;
   variant?: InputVariant;
-  size?: InputSize;
+  description?: string;
+  label?: string;
 }
