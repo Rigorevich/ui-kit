@@ -4,7 +4,7 @@ import { Tabs, TabPanel } from './';
 
 const meta: Meta<typeof Tabs> = {
   component: Tabs,
-  title: 'Marbella/Tabs',
+  title: '360-feedback/Tabs',
   parameters: {
     layout: 'centered',
   },

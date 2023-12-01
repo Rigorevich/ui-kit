@@ -1,5 +1,43 @@
 @import "../../styles/global";
 
+.Wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.Calendar {
+  color: var(--dark-contrast-300-color);
+  position: absolute;
+  top: 7px;
+  left: 8px;
+  z-index: 1;
+
+  & + .Input {
+    padding-left: 35px;
+  }
+
+  &__success {
+    color: var(--success-color);
+  }
+
+  &__error {
+    color: var(--error-color);
+  }
+}
+
+.Search {
+  color: var(--dark-contrast-300-color);
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+
+  & + .Input {
+    padding-right: 32px;
+    background: inherit;
+  }
+}
+
 .Label {
   cursor: default;
 
@@ -7,12 +45,22 @@
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-heigth-base);
+
+  & + .Search {
+    top: 29px;
+  }
+
+  & + .Calendar {
+    top: 28.5px;
+  }
 }
 
 .Input {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  width: 100%;
   padding: 6px 8px;
   border: var(--border-width-small) solid var(--dark-contrast-300-color);
   border-radius: var(--border-radius-small);
@@ -26,13 +74,19 @@
   transition: all 0.3s ease-in-out;
 
   &__variant {
-    &_error {
+    &_error_icon {
       background: url('../../assets/error.svg') no-repeat center right 9px;
+    }
+
+    &_error_border {
       border: var(--border-width-small) solid var(--error-color);
     }
 
-    &_success {
+    &_success_icon {
       background: url('../../assets/success.svg') no-repeat center right 9px;
+    }
+
+    &_success_border {
       border: var(--border-width-small) solid var(--success-color);
     }
   }
@@ -55,8 +109,9 @@
   }
 
   &:disabled {
-    opacity: 0.5;
     cursor: not-allowed;
+    color: var(--dark-color-disabled);
+    border: var(--border-width-small) solid var(--dark-contrast-300-color);
     background-color: var(--dark-contrast-800-color);
   }
 }
@@ -72,21 +127,28 @@
   line-height: var(--line-heigth-base);
 
   &__variant {
-
     &_error {
         &::before {
           content: "";
           display: inline-block;
-          width: 13px; /* Ширина иконки */
-          height: 13px; /* Высота иконки */
-          background: url('../../assets/error.svg') no-repeat center center; /* Путь к вашей иконке */
-          background-size: contain; /* Размер иконки */
-          margin-right: 4px; /* Расстояние между иконкой и текстом */
+          width: 13px;
+          height: 13px;
+          background: url('../../assets/error.svg') no-repeat center center;
+          background-size: contain;
+          margin-right: 4px;
         }
     }
 
     &_success {
-
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        background: url('../../assets/success.svg') no-repeat center center;
+        background-size: contain;
+        margin-right: 4px;
+      }
     }
   }
 }
