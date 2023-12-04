@@ -6,6 +6,26 @@ import type { InputProps } from './Input.types';
 
 import styles from './Input.module.scss';
 
+export const InputWithIcon = ({
+  variant = 'default',
+  inputType = 'default',
+}: {
+  variant: InputProps['variant'];
+  inputType: InputProps['inputType'];
+}) => {
+  const dateState: Record<string, boolean> = {
+    [styles[`Date__success`]]: variant === 'success',
+    [styles[`Date__error`]]: variant === 'error',
+  };
+
+  return (
+    <>
+      {inputType === 'date' && <CalendarIcon className={classNames(styles.Date, dateState)} />}
+      {inputType === 'search' && <SearchIcon className={styles.Search} />}
+    </>
+  );
+};
+
 export const Input = ({ variant = 'default', inputType = 'default', description, label, ...props }: InputProps) => {
   const id = useId();
 
@@ -16,16 +36,7 @@ export const Input = ({ variant = 'default', inputType = 'default', description,
           {label}
         </label>
       )}
-      {inputType === 'date' ? (
-        <CalendarIcon
-          className={classNames(styles.Calendar, {
-            [styles[`Calendar__success`]]: variant === 'success',
-            [styles[`Calendar__error`]]: variant === 'error',
-          })}
-        />
-      ) : (
-        inputType === 'search' && <SearchIcon className={styles.Search} />
-      )}
+      <InputWithIcon variant={variant} inputType={inputType} />
       <input
         id={id}
         autoComplete="off"
