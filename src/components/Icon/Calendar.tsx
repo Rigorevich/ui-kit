@@ -3,7 +3,7 @@ export interface CalendarIconProps {
   size?: number;
 }
 
-export const CalendarIcon = ({ className, size = 18 }: CalendarIconProps) => {
+export const CalendarIcon = ({ className, size = 20 }: CalendarIconProps) => {
   return (
     <svg
       className={className}
