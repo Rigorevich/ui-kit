@@ -2,10 +2,10 @@ import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import terser from '@rollup/plugin-terser';
 import postcss from 'rollup-plugin-postcss';
+import postcssUrl from 'postcss-url';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import autoprefixer from 'autoprefixer';
 import dts from 'rollup-plugin-dts';
-import copy from 'rollup-plugin-copy';
 
 import packageJson from './package.json' assert { type: 'json' };
 
@@ -28,12 +28,9 @@ export default [
       peerDepsExternal(),
       commonjs(),
       terser(),
-      copy({
-        targets: [{ src: 'src/assets/**/*', dest: 'dist/assets/images' }],
-      }),
       typescript({ tsconfig: './tsconfig.json' }),
       postcss({
-        plugins: [autoprefixer()],
+        plugins: [autoprefixer(), postcssUrl({ url: 'inline' })],
         modules: true,
         extract: false,
         namedExports: true,
