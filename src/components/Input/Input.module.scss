@@ -5,15 +5,15 @@
   display: inline-block;
 }
 
-.Calendar {
+.Date {
   color: var(--dark-contrast-300-color);
   position: absolute;
   top: 7px;
-  left: 8px;
+  left: 11px;
   z-index: 1;
 
   & + .Input {
-    padding-left: 35px;
+    padding-left: 40px;
   }
 
   &__success {
@@ -29,11 +29,11 @@
   color: var(--dark-contrast-300-color);
   position: absolute;
   top: 8px;
-  right: 8px;
+  right: 11px;
   z-index: 1;
 
   & + .Input {
-    padding-right: 32px;
+    padding-right: 40px;
     background: inherit;
   }
 }
