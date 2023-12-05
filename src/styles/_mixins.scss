@@ -1,0 +1,10 @@
+@mixin typography-all-caps {
+    text-transform: uppercase;
+    line-height: normal;
+}
+
+@mixin typography-link {
+  color: var(--primary-color);
+  letter-spacing: 0.36px;
+  text-decoration-line: underline;
+}

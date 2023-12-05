@@ -1,0 +1,77 @@
+@import "../../styles/global";
+
+.Wrapper {
+  position: relative;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 12px;
+}
+
+.Checkbox {
+  appearance: none;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: var(--border-width-small) solid var(--dark-contrast-300-color);
+    border-radius: var(--border-radius-small);
+  }
+
+  &:checked::before {
+    border: none;
+    background: var(--primary-color) url("../../assets/check-mark.svg") no-repeat center;
+  }
+
+  &_error {
+    &::before {
+      border-color: var(--error-color);
+    }
+  }
+
+  &:hover:enabled {
+    &::before {
+      border-color: var(--dark-contrast-200-color);
+    }
+
+    &:checked::before {
+      background-color: var(--primary-hover-color);
+    }
+  }
+
+  &:focus {
+    &::before {
+      border-color: var(--focus-color);
+      box-shadow: var(--shadow-focus-highlight);
+    }
+
+    &:checked::before {
+      box-shadow: var(--shadow-focus-highlight);
+    }
+  }
+
+  &:disabled {
+
+    &::before {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    &:checked::before {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.Label {
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-heigth-base);
+  user-select: none;
+  pointer-events: none;
+
+}
