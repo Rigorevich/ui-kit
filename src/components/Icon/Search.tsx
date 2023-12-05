@@ -7,7 +7,7 @@ export const SearchIcon = ({ className, size = 18 }: SearchIconProps) => {
   return (
     <svg
       className={className}
-      width={size}
+      width={size + 1}
       height={size}
       viewBox="0 0 18 18"
       fill="currentColor"

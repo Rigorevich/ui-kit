@@ -9,7 +9,7 @@ export const CalendarIcon = ({ className, size = 20 }: CalendarIconProps) => {
       className={className}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
-      height={size + 2}
+      height={size + 1}
       viewBox="0 0 18 20"
       fill="currentColor"
     >

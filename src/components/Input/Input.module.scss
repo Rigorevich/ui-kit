@@ -50,8 +50,8 @@
     top: 29px;
   }
 
-  & + .Calendar {
-    top: 28.5px;
+  & + .Date {
+    top: 28px;
   }
 }
 
@@ -60,7 +60,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 100%;
+  width: 250px;
   padding: 6px 8px;
   border: var(--border-width-small) solid var(--dark-contrast-300-color);
   border-radius: var(--border-radius-small);
